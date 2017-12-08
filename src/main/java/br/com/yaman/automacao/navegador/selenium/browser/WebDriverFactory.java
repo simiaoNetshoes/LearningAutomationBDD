@@ -1,6 +1,5 @@
 package br.com.yaman.automacao.navegador.selenium.browser;
 
-import org.junit.BeforeClass;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -16,10 +15,9 @@ public class WebDriverFactory {
 	private static WebDriverFactory instance = null;
 	protected WebDriver webDriver;
 	protected WebDriverWait webDriverWait;
-
 	public WebDriverFactory() {
+		// TODO Auto-generated constructor stub
 	}
-
 	/**
 	 * Metodo Construtor responsavel por instanciar o webDriver para o navegador
 	 * escolhido
@@ -27,8 +25,7 @@ public class WebDriverFactory {
 	 * @param navegador
 	 * @return webDriver
 	 */
-	@BeforeClass
-	public void setWebDriver(Navegador navegador) {
+	public WebDriverFactory setWebDriver(Navegador navegador) {
 
 		switch (navegador) {
 		case FIREFOX:
@@ -42,6 +39,8 @@ public class WebDriverFactory {
 		default:
 			break;
 		}
+		
+		return this;
 	}
 
 	/**
