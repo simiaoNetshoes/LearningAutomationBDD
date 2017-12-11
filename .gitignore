@@ -1,8 +1,9 @@
 /target/
+.gitignore
 .classpath
 .project
 .settings
 *.log
-Evidences/
+Evidences/*
 sample3-table-json.txt
 sample3-view-json.txt
