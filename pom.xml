@@ -2,9 +2,9 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.yaman.desafio</groupId>
-	<artifactId>desafioyaman</artifactId>
+	<artifactId>automation_bdd</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>desafioYaman</name>
+	<name>automation_bdd</name>
 	<description>Este projeto tem como objetivo atender aos requisitos do desafio proposto</description>
 
 	<dependencies>
