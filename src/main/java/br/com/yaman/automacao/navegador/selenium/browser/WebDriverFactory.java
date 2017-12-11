@@ -8,6 +8,15 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import br.com.yaman.automacao.navegador.utils.Navegador;
 
+/**
+ * 
+ * Propósito da classe: Encapsular metodos de funções específicas da Fabrica de WebDriver
+ *
+ * @since 10 de Dez de 2017 06:46:12
+ * @author Daniel Simião<BR>
+ *         DesafioYaman<BR>
+ * 
+ */
 public class WebDriverFactory {
 
 	final static long TIME_OUT = 30;
@@ -18,12 +27,15 @@ public class WebDriverFactory {
 	public WebDriverFactory() {
 		// TODO Auto-generated constructor stub
 	}
+
 	/**
-	 * Metodo Construtor responsavel por instanciar o webDriver para o navegador
-	 * escolhido
 	 * 
-	 * @param navegador
-	 * @return webDriver
+	 * Propósito do Método: responsavel por instanciar o webDriver para o navegador
+	 *
+	 * @since 10 de Dez de 2017 06:50:53
+	 * @author Daniel Simião<BR>
+	 *         DesafioYaman<BR>
+	 * 
 	 */
 	public WebDriverFactory setWebDriver(Navegador navegador) {
 
@@ -44,14 +56,27 @@ public class WebDriverFactory {
 	}
 
 	/**
-	 * Metodo responsavel por retornar o webDriver Construido
 	 * 
-	 * @return
+	 * Propósito do Método: retornar a instância do WebDriver corrente
+	 *
+	 * @since 10 de Dez de 2017 06:52:12
+	 * @author Daniel Simião<BR>
+	 *         DesafioYaman<BR>
+	 * 
 	 */
 	public WebDriver getWebDriver() {
 		return this.webDriver;
 	}
 
+	/**
+	 * 
+	 * Propósito do Método: retornar a instância do WebDriver corrente por singleton
+	 *
+	 * @since 10 de Dez de 2017 06:50:53
+	 * @author Daniel Simião<BR>
+	 *         DesafioYaman<BR>
+	 * 
+	 */
 	public static WebDriverFactory getInstance() {
 		if (instance == null) {
 			instance = new WebDriverFactory();
@@ -60,9 +85,13 @@ public class WebDriverFactory {
 	}
 
 	/**
-	 * Obter driver do Firefox
 	 * 
-	 * @return
+	 * Propósito do Método: retornar a instância do WebDriver FireFox
+	 *
+	 * @since 10 de Dez de 2017 06:54:31
+	 * @author Daniel Simião<BR>
+	 *         DesafioYaman<BR>
+	 * 
 	 */
 	private WebDriver getFirefoxDriver() {
 		System.setProperty("webdriver.gecko.driver", "src\\main\\resources\\drivers\\geckodriver.exe");
@@ -72,9 +101,13 @@ public class WebDriverFactory {
 	}
 
 	/**
-	 * Obter driver do Chrome
 	 * 
-	 * @return
+	 * Propósito do Método: retornar a instância do WebDriver Chrome
+	 *
+	 * @since 10 de Dez de 2017 06:59:53
+	 * @author Daniel Simião<BR>
+	 *         DesafioYaman<BR>
+	 * 
 	 */
 	private WebDriver getChromeDriver() {
 		try {

@@ -3,7 +3,14 @@ package br.com.yaman.automacao.utils;
 import org.apache.log4j.Logger;
 
 /**
+ * 
+ * Propósito da classe: Gerar objetos correspondentes aos produtos exibidos na
+ * pagina arqmazenando seus principais atributos
  *
+ * @since 09 de Dez de 2017 07:37:19
+ * @author Daniel Simião<BR>
+ *         DesafioYaman<BR>
+ * 
  */
 public class LoggerUtils {
 	

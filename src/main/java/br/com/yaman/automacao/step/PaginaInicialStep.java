@@ -7,6 +7,16 @@ import cucumber.api.java.pt.E;
 import cucumber.api.java.pt.Entao;
 import cucumber.api.java.pt.Quando;
 
+/**
+ * 
+ * Propósito da classe: Gerenciar os metodos de acesso as funcionalidades
+ * da tela Pagina inicial Mercado Livre
+ *
+ * @since 10 de Dez de 2017 16:43:36
+ * @author Daniel Simião<BR>
+ *         DesafioYaman<BR>
+ * 
+ */
 public class PaginaInicialStep {
 	MlPaginaInicialFunc paginaInicialFuncionalidade = new MlPaginaInicialFunc();
 	

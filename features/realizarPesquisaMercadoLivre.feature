@@ -1,4 +1,7 @@
-#language:pt
+#language: pt
+#Author: Daniel Simião
+#encoding: iso-8859-1
+#Version: v1.0
 @teste
 Funcionalidade: realizar pesquisa no site Mercado Livre
 

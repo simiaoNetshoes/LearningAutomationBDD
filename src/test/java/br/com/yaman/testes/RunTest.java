@@ -6,6 +6,15 @@ import cucumber.api.CucumberOptions;
 import cucumber.api.SnippetType;
 import cucumber.api.junit.Cucumber;
  
+/**
+* 
+* Propósito da classe: Realizar execução dos testes via JUnit
+*
+* @since 3 de jul de 2017 08:19:27
+* @authorDaniel Simião<BR>
+*         DesafioYaman<BR>
+* 
+*/
 @RunWith(Cucumber.class)
 @CucumberOptions(snippets = SnippetType.CAMELCASE 
 		,format = { "html:target/cucumber-html-report"

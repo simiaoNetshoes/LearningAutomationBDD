@@ -8,6 +8,15 @@ import org.openqa.selenium.WebElement;
 import br.com.yaman.automacao.navegador.selenium.command.CommandWeb;
 import br.com.yaman.automacao.navegador.selenium.searchElement.SearchElement;
 
+/**
+ * 
+ * Propósito da classe: Encapsular metodos de captura de Elementos na tela Inicial Mercado Livre
+ *
+ * @since 10 de Dez de 2017 13:37:49
+ * @author Daniel Simião<BR>
+ *         DesafioYaman<BR>
+ * 
+ */
 public class MlPesquisaPage {
 	CommandWeb command;
 	SearchElement searchElement;
@@ -24,10 +33,29 @@ public class MlPesquisaPage {
 	public final String contItensLista = "//*[@id='searchResults']/li";
 	public final String paginacaoElements = "//*[@id=\"results-section\"]//li[@class='pagination__page']/a";
 
+	
+	/**
+	 * 
+	 * Propósito do Método: retorna o elemento que evidencia qual item foi pesquisado para confirmação de sucesso na pesquisa
+	 *
+	 * @since 10 de Dez de 2017 13:38:19
+	 * @author Daniel Simião<BR>
+	 *         DesafioYaman<BR>
+	 * 
+	 */
 	public WebElement getItemPesquisado() {
 		return searchElement.getWebElement(valueItemPesquisado);
 	}
 
+	/**
+	 * 
+	 * Propósito do Método: retorna o elemento que evidencia qual que a pesquisa não retornou resultados
+	 *
+	 * @since 10 de Dez de 2017 13:46:34
+	 * @author Daniel Simião<BR>
+	 *         DesafioYaman<BR>
+	 * 
+	 */
 	public WebElement getMensagemRetornoNegativo() {
 		return searchElement.getWebElement(mensagemRetornoNegativo);
 	}
@@ -53,16 +81,43 @@ public class MlPesquisaPage {
 		return listaItens;
 	}
 
+	/**
+	 * 
+	 * Propósito do Método: retorna uma lista de elementos retornados na pesquisa realizada
+	 *
+	 * @since 10 de Dez de 2017 13:50:37
+	 * @author Daniel Simião<BR>
+	 *         DesafioYaman<BR>
+	 * 
+	 */
 	public List<WebElement> getListItensPesquisadosElements() {
 		return searchElement.getListWebElements(contItensLista);
 	}
 
+	/**
+	 * 
+	 * Propósito do Método: retorna o nome de um elemento retornado na pesquisa
+	 *
+	 * @since 10 de Dez de 2017 13:55:19
+	 * @author Daniel Simião<BR>
+	 *         DesafioYaman<BR>
+	 * 
+	 */
 	private String getNomeItemOnList(int posit) {
 		return searchElement.getWebElement(
 				"//*[@id='searchResults']/li[" + posit + "]//h2[@class='item__title list-view-item-title']/span")
 				.getText();
 	}
 
+	/**
+	 * 
+	 * Propósito do Método: retorna o nome de um elemento retornado na pesquisa
+	 *
+	 * @since 10 de Dez de 2017 13:59:53
+	 * @author Daniel Simião<BR>
+	 *         DesafioYaman<BR>
+	 * 
+	 */
 	private String getValorItemOnList(int posit) {
 		return searchElement.getWebElement("//*[@id='searchResults']/li[" + posit + "]//span[@class='price-symbol']")
 				.getText()
@@ -72,6 +127,16 @@ public class MlPesquisaPage {
 						.getText();
 	}
 
+
+	/**
+	 * 
+	 * Propósito do Método: retorna o elemento de uma pagina do container de paginação da pesquisa
+	 *
+	 * @since 10 de Dez de 2017 15:12:28
+	 * @author Daniel Simião<BR>
+	 *         DesafioYaman<BR>
+	 * 
+	 */
 	public WebElement getPaginacaoElement(String pagina) {
 		List<WebElement> itensPaginacao = searchElement.getListWebElements(paginacaoElements);
 		for (WebElement webElement : itensPaginacao) {
