@@ -24,17 +24,19 @@ public class PaginaInicialStep {
 	public void when() throws Throwable {
 	}
 
-	@Quando("^acessar a segunda pagina de resultados$")
-	public void when1() throws Throwable {
+	@Quando("^paginar resultados ate a pagina informada$")
+	public void paginarAteApaginaInformada(DataTable dataTable) throws Throwable {
+		paginaInicialFuncionalidade.paginarTo(dataTable);
 	}
 
-	@Entao("^sera evidenciado os cinco primeiros resultados na pagina de pequisas Mercado Livre$")
+	@Entao("^sera impresso os cinco primeiros resultados na pagina de pequisas Mercado Livre$")
 	public void then() throws Throwable {
 		paginaInicialFuncionalidade.imprimirDadosCincoPrimeirosResultados();
 	}
 
 	@Entao("^sera evidenciado o penultimo anuncio da pagina de pequisas Mercado Livre$")
-	public void then1() throws Throwable {
+	public void evidenciaPenultimoAnuncio() throws Throwable {
+		paginaInicialFuncionalidade.evidenciaPenultimoAnuncio();
 	}
 
 }

@@ -26,7 +26,7 @@ public class MlPaginaInicialPage {
 		return searchElement.getWebElement(inputBuscaXp);
 	}
 
-	public WebElement lupaPesquisar() {
+	public WebElement getLupaPesquisar() {
 		return searchElement.getWebElement(buttonPesquisar);
 	}		
 }

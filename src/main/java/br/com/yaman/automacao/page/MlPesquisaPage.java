@@ -22,6 +22,7 @@ public class MlPesquisaPage {
 	public final String listaDeResultadosPesquisa = ".//*[@id='searchResults']";
 	public final String nomeProdutoDaLista = "//*[@id=\"searchResults\"]/li[1]/div/div[2]/div/h2/a/span";
 	public final String contItensLista = "//*[@id='searchResults']/li";
+	public final String paginacaoElements = "//*[@id=\"results-section\"]//li[@class='pagination__page']/a";
 
 	public WebElement getItemPesquisado() {
 		return searchElement.getWebElement(valueItemPesquisado);
@@ -31,19 +32,29 @@ public class MlPesquisaPage {
 		return searchElement.getWebElement(mensagemRetornoNegativo);
 	}
 
-	public List<ItemPesquisadoBean> getListItensPesquisados() {
+	/**
+	 * Devolve Lista de objetos do tipo ItemPesquisadoBean contendo os dados dos
+	 * items retornados na tela após pesquisa
+	 * 
+	 * @return List<ItemPesquisadoBean>
+	 */
+	public List<ItemPesquisadoBean> getListItensPesquisadosValues() {
 		List<ItemPesquisadoBean> listaItens = new ArrayList<ItemPesquisadoBean>();
+		int quantItens = searchElement.getListWebElements(contItensLista).size();
 
-		for (WebElement itemLista : searchElement.getListWebElements(contItensLista)) {
+		for (int i = 1; i <= quantItens; i++) {
 			ItemPesquisadoBean item = new ItemPesquisadoBean();
-			item.setNome(getNomeItemOnList(1));
-			item.setValor(getValorItemOnList(1));
-			item.setPosicao(1);
+			item.setNome(getNomeItemOnList(i));
+			item.setValor(getValorItemOnList(i));
+			item.setPosicao(i);
 
 			listaItens.add(item);
 		}
-
 		return listaItens;
+	}
+
+	public List<WebElement> getListItensPesquisadosElements() {
+		return searchElement.getListWebElements(contItensLista);
 	}
 
 	private String getNomeItemOnList(int posit) {
@@ -59,6 +70,16 @@ public class MlPesquisaPage {
 				+ searchElement
 						.getWebElement("//*[@id='searchResults']/li[" + posit + "]//span[@class='price-fraction']")
 						.getText();
+	}
+
+	public WebElement getPaginacaoElement(String pagina) {
+		List<WebElement> itensPaginacao = searchElement.getListWebElements(paginacaoElements);
+		for (WebElement webElement : itensPaginacao) {
+			if (webElement.getText().equals(pagina)) {
+				return webElement;
+			}
+		}
+		return null;
 	}
 
 }
