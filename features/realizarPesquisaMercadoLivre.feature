@@ -13,8 +13,9 @@ Funcionalidade: realizar pesquisa no site Mercado Livre
 
   @ID00001
   Cenario: Realizar uma pesquisa no site do mercado livre e imprimir somente titulo e valor dos CINCO primeiros resultados
-  Quando pesquisa retorna resultados esperados na pagina de pesquisa Mercado Livre
-  Entao sera impresso os cinco primeiros resultados na pagina de pequisas Mercado Livre
+    Quando pesquisa retorna resultados esperados na pagina de pesquisa Mercado Livre
+    Entao sera impresso os cinco primeiros resultados na pagina de pequisas Mercado Livre
+
   @ID00002
   Cenario: Realizar uma pesquisa no site do mercado livre que contenha paginacao, tirar um print do penultimo anuncio da segunda pagina
     Quando pesquisa retorna resultados esperados na pagina de pesquisa Mercado Livre
