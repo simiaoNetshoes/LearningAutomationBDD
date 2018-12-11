@@ -1,0 +1,49 @@
+#language: pt
+@NovoCheckout
+Funcionalidade: Novo Checkout - Finalizar Pedido via Pagamento One Click
+
+  Esta feature tem como finalidade agrupar os cenários de teste referente a fechamentos de pedidos via One Click
+
+  Contexto:
+    Dado que estou na loja
+
+  Esquema do Cenário: Pagamento com cartao e salva cartao
+    Quando realizo login "qa.auto.oneclick.01@gmail.com" e "123456" [--Pagina de Login]
+    E acesso cartões salvos [--Pagina de Usuario]
+    E removo cartões salvos [--Pagina Meus Cartões]
+    E seleciono o produto "random" [--Pagina de Produto]
+    E seleciono um tamanho disponivel [--Pagina Produto]
+    E acesso a pagina de carrinho [--Pagina Carrinho]
+    E acesso a pagina de pagamento [--Pagina de Carrinho]
+    E acesso a pagina de novo checkout [--Login Novo Checkout]
+    E seleciono um endereço registrado [--Pagina de Endereço]
+    E seleciono tipo de envio "<tipoEnvio>" [--Pagina Tipo Envio]
+    E seleciono o tipo de pagamento "cartaoCredito" [--Pagina Tipo Pagamento]
+    E preencho dados de cartão bandeira "visaOneClick" [--Pagina Dados Cartão]
+    E reviso as informações do pedido [--Pagina Revisão Pedido]
+    E finalizo o pedido [--Pagina Revisão Pedido]
+    Então meu pedido é completado com sucesso [--Pagina Confirmação Pedido Novo Checkout]
+
+    Exemplos:
+      | tipoEnvio |
+      | agendada  |
+ #     | random    |
+
+  Esquema do Cenário: Pagamento com one click "<tipoEnvio>"
+    Quando seleciono o produto "random" [--Pagina de Produto]
+    E seleciono um tamanho disponivel [--Pagina Produto]
+    E acesso a pagina de carrinho [--Pagina Carrinho]
+    E acesso a pagina de pagamento [--Pagina de Carrinho]
+    E acesso a pagina de novo checkout [--Login Novo Checkout]
+    E realizo login "qa.auto.oneclick.02@gmail.com" e "defaultPassword" [--Pagina de Login]
+    E seleciono um endereço registrado [--Pagina de Endereço]
+    E seleciono tipo de envio "<tipoEnvio>" [--Pagina Tipo Envio]
+    E seleciono o tipo de pagamento "oneClick" [--Pagina Tipo Pagamento]
+    E reviso as informações do pedido [--Pagina Revisão Pedido]
+    E finalizo o pedido [--Pagina Revisão Pedido]
+    Então meu pedido é completado com sucesso [--Pagina Confirmação Pedido Novo Checkout]
+
+    Exemplos:
+      | tipoEnvio |
+      | expressa    |
+ #     | random    |
