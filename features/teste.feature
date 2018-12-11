@@ -1,1 +1,2 @@
+@Automated
 Feature: teste
