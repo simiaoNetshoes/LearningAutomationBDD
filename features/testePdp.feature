@@ -5,7 +5,7 @@ Feature: Product Page
   A user
   should be able to choose on pdp the attributes that fits better
 
-  @SA-1 @OPEN @QA1
+  @SA-1 @OPEN @QA1 @MANUAL
   Scenario Outline: Change colors and sizes
     Given que estou na loja
     When seleciono o produto "<sku>" [--Pagina de Produto]
