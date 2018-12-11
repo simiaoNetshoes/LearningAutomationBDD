@@ -1,17 +1,17 @@
 #language: pt
-#Author: Daniel Simi„o
+#Author: Daniel Simi√£o
 #encoding: iso-8859-1
 #Version: v1.0
 @teste
 Funcionalidade: realizar gerenciamento cadastral de funcionarios 
-	#Objetivo dos testes:
-	# 1 - Garantir o resultado esperado das funcionalidades de gerenciamento de funcion·rio do sistema bem como suas exceÁıes	
+	Objetivo dos testes:
+	 1 - Garantir o resultado esperado das funcionalidades de gerenciamento de funcion√°rio do sistema bem como suas exce√ß√µes	
   
-  #PrÈ-requisitos: 
-  # 1 - Disponivel planilha excel contendo informÁıes do funcionario a ser incluso no sistema src/Massa
-	# 2 - Login e Senha contendo perfil validos para acesso a area de gerenciamento de funcionarios
-	# 3 - Todas aÁıes (inclusao, alteraÁ„o e exclus„o) devem ser validadas e tratadas suas exceÁıes
-	# 4 - Tempo de resposta das aÁıes no sistema (incluir, consultar, alterar e excluir) n„o dever· ser maior que 1 minuto
+  Pr√©-requisitos: 
+  1 - Disponivel planilha excel contendo inform√ß√µes do funcionario a ser incluso no sistema src/Massa
+	 2 - Login e Senha contendo perfil validos para acesso a area de gerenciamento de funcionarios
+	 3 - Todas a√ß√µes (inclusao, altera√ß√£o e exclus√£o) devem ser validadas e tratadas suas exce√ß√µes
+	 4 - Tempo de resposta das a√ß√µes no sistema (incluir, consultar, alterar e excluir) n√£o dever√° ser maior que 1 minuto
 	
   Contexto: 
     Dado que tenha acessado o sistema
@@ -21,23 +21,23 @@ Funcionalidade: realizar gerenciamento cadastral de funcionarios
     
   @ID01
   Cenario: Realizar Inclusao de funcionario no sistema        
-  Quando realizar inclus„o de funcionario na tela de  gerenciamento de funcionarios do sistema
-  |nome|endereÁo|cidade|idade|quantidade de filhos|CPF|
+  Quando realizar inclus√£o de funcionario na tela de  gerenciamento de funcionarios do sistema
+  |nome|endere√ßo|cidade|idade|quantidade de filhos|CPF|
   |    |        |      |     |                    |   |
   Entao a pagina de inclusao retorna matricula gerada com sucesso 
   
   @ID02
-  Cenario: Realizar AlteraÁ„o de funcionario no sistema        
+  Cenario: Realizar Altera√ß√£o de funcionario no sistema        
   Quando realizar pesquisa de funcionario na tela de gerenciamento de funcionarios do sistema
   |matricula|
   |    			|
   E realizar a acao de Alteracao Cadastral para o funcionario
-  |nome|endereÁo|cidade|idade|quantidade de filhos|CPF|
+  |nome|endere√ßo|cidade|idade|quantidade de filhos|CPF|
   |    |        |      |     |                    |   |
   Entao a pagina de Alteracao Cadastral retorna alteracao realizada com sucesso
 
   @ID03
-  Cenario: Realizar Exclus„o de funcionario no sistema        
+  Cenario: Realizar Exclus√£o de funcionario no sistema        
   Quando realizar pesquisa de funcionario na tela de gerenciamento de funcionarios do sistema
   |matricula|
   |    			|
