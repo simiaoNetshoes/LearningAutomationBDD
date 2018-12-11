@@ -1,3 +1,4 @@
+@teste
 Feature: realizar pesquisa no site Mercado Livre
 
   Background:
