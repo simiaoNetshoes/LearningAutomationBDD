@@ -1,2 +1,2 @@
-@Automated
+@Automated @this
 Feature: teste
