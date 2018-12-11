@@ -17,7 +17,7 @@ Feature: Product Page
       | sku    |
       | random |
 
-  @SA-1 @OPEN @this
+  @ORPHAN @this
   Scenario: Check persona
     Given que estou na loja
     And seleciono o produto "persona" [--Pagina de Produto]
