@@ -1,2 +1,1 @@
-@PDP
 Feature: Completar endereco
