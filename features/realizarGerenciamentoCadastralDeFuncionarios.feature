@@ -1,18 +1,6 @@
-#language: pt
-#Author: Daniel Simião
-#encoding: iso-8859-1
-#Version: v1.0
 @teste
 Funcionalidade: realizar gerenciamento cadastral de funcionarios 
-	Objetivo dos testes:
-	 1 - Garantir o resultado esperado das funcionalidades de gerenciamento de funcionário do sistema bem como suas exceções	
-  
-  Pré-requisitos: 
-  1 - Disponivel planilha excel contendo informções do funcionario a ser incluso no sistema src/Massa
-	 2 - Login e Senha contendo perfil validos para acesso a area de gerenciamento de funcionarios
-	 3 - Todas ações (inclusao, alteração e exclusão) devem ser validadas e tratadas suas exceções
-	 4 - Tempo de resposta das ações no sistema (incluir, consultar, alterar e excluir) não deverá ser maior que 1 minuto
-	
+		
   Contexto: 
     Dado que tenha acessado o sistema
     E que tenha realizado login com as credencias
